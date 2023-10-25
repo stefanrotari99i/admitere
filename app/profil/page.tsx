@@ -1,15 +1,14 @@
 import StikyHeader from "@/components/StikyHeader";
-import { types } from "util";
 
 const page = () => {
   return (
     <div className="flex min-h-screen flex-col items-center mb-8">
       <StikyHeader title="Dosare de admitere" />
         <div className="flex flex-col w-full md:w-[80dvw] gap-2 p-2">
-            <Dosar nr={1} data="12.05.2021" status="ACCEPTED" university="Universitatea Tehnica" faculty="Automatica si Calculatoare" speciality="Calculatoare"  status="Validat" />
-            <Dosar nr={2} data="12.05.2021" status="REJECTED" university="Universitatea Tehnica" faculty="Automatica si Calculatoare" speciality="Calculatoare"  status="Validat" />
-            <Dosar nr={3} data="12.05.2021" status="PENDING" university="Universitatea Tehnica" faculty="Automatica si Calculatoare" speciality="Calculatoare"  status="Refuzat" />
-            <Dosar nr={4} data="12.05.2021" status="ACCEPTED" university="Universitatea Tehnica" faculty="Automatica si Calculatoare" speciality="Calculatoare"  status="Validat" />
+            <Dosar nr={1} data="12.05.2021" status="ACCEPTED" university="Universitatea Tehnica" faculty="Automatica si Calculatoare" speciality="Calculatoare"  />
+            <Dosar nr={2} data="12.05.2021" status="REJECTED" university="Universitatea Tehnica" faculty="Automatica si Calculatoare" speciality="Calculatoare"  />
+            <Dosar nr={3} data="12.05.2021" status="PENDING" university="Universitatea Tehnica" faculty="Automatica si Calculatoare" speciality="Calculatoare"   />
+            <Dosar nr={4} data="12.05.2021" status="ACCEPTED" university="Universitatea Tehnica" faculty="Automatica si Calculatoare" speciality="Calculatoare"  />
         </div>
     </div>
   );
@@ -65,7 +64,7 @@ const Dosar = (props: DosarProps) => {
         <div className="flex flex-col items-end w-fit text-center">
             <p className="text-gray-500 text-xs">Status</p>
             <span 
-                className={` rounded-md px-2 py-1 text-xs mt-2 ${STATUS[props?.status]}`}
+                className={` rounded-md px-2 py-1 text-xs mt-2 `}
             >{props.status}</span>
         </div>
     </div>
